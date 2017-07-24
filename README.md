@@ -1,10 +1,14 @@
 # Customer segments
-This project is a part of the Udacity Machine Learning Nanodegree program.
+This project was submitted as a part of the Udacity Machine Learning Nanodegree program.
 
 
 ### Dataset
 The dataset was obtained from [UCI machine learning 
 repository](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers)
+It contains the traction data from wholesale customers. 
+Briefly, the features include annual spending on six categories, Fresh, Frozen, Milk, Grocery, Delicatessen, 
+and Detergent_Paper, in monetary unit. It also includes categorical variables Regions and Channel.
+
 
 ### Methods
 
@@ -12,8 +16,10 @@ repository](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers)
 ##### Decorrelation and dimension reduction
 ![Alt text](https://github.com/JennyLeeStat/customer_segments/blob/master/assets/pca_biplot.png)
 
-
+Principal component analysis was performed to decorrelate the data. 
+The plot above shows the data points on the first two components as axes. 
 The Detergent_Paper is very nearly the same as the fist component in negative direction. Grocery and Milk, which are strongly correlated with the Detergent_Paper, are strongly projected on the first component. Fresh highly correlates with Frozen, and these two very strongly projects on to the negative direction of dimension 2. Delicatessan is weakly correlates with Frozen and Fresh. This observation is consistent with the pca_results plot obtained above. While biplot depicts only first two dimensions, it is more easily interpretable with feature axes and data points.
+
 
 ##### Clustering
 ![Alt text](https://github.com/JennyLeeStat/customer_segments/blob/master/assets/compare_clusters.png)
